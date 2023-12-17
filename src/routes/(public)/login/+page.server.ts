@@ -30,6 +30,6 @@ export const actions = {
 			sameSite: 'strict',
 			secure: true
 		});
-		throw redirect(303, '/authenticated/dashboard');
+		redirect(303, '/authenticated/dashboard');
 	}
 };
