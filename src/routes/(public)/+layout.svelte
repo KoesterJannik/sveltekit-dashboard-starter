@@ -2,7 +2,9 @@
 	import Navbar from '../../components/Navbar.svelte';
 </script>
 
-<div class="container">
+<div class="flex h-screen flex-col overflow-hidden">
 	<Navbar />
-	<slot />
+	<div class="overflow-hidden">
+		<slot />
+	</div>
 </div>

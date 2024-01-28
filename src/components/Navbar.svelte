@@ -3,26 +3,23 @@
 	import { navLinks } from '../routes/links';
 </script>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-bs-toggle="collapse"
-			data-bs-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent"
-			aria-expanded="false"
-			aria-label="Toggle navigation"
-		>
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class=" mt-0 w-full border bg-gray-800 p-2">
+	<div class=" flex flex-wrap items-center">
+		<div class="flex w-full justify-center font-extrabold text-white md:w-1/2 md:justify-start">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+				<span class="pl-2 text-2xl"><i class="em em-grinning"></i> BrandName</span>
+			</a>
+		</div>
+		<div class="flex w-full content-center justify-between pt-2 md:w-1/2 md:justify-end">
+			<ul class="list-reset flex flex-1 items-center justify-between md:flex-none">
 				{#each navLinks as link}
-					<li class="nav-item">
-						<a class={`nav-link ${$page.url.pathname == link.path && 'active'}`} href={link.path}
-							>{link.name}</a
+					<li class="mr-3">
+						<a
+							class="inline-block px-4 py-2 text-white no-underline ${$page.url.pathname ==
+							link.path
+								? 'underline'
+								: ''}"
+							href={link.path}>{link.name}</a
 						>
 					</li>
 				{/each}
